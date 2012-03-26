@@ -1,55 +1,56 @@
-package com.main.HelloSolarSystem;
-
-//import com.call.contact.R;
+package com.main.HelloSolarSystem; //File name and location within file structure
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.*;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-//import android.view.KeyEvent;
-//import android.widget.EditText;
-//import android.widget.TextView;
+// import android.widget.RadioButton; //Only required if radio buttons are needed
 
 public class HelloSolarSystemActivity extends Activity {
-	  
-//	  RadioButton myOption1, myOption2, myOption3;
 	  private Button btnplus;
 	  private Button btnminus;
 	  private TextView tvnumber;
-	  
-	  /** Called when the activity is first created. */  
+	  //RadioButton myOption1, myOption2, myOption3; //Only required if radio buttons are needed
+	
+///////// 
+//Section goal - Connect PLUS and MINUS buttons in UI so they control the number value in the center of the screen
+/////////
 	  
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
-	      super.onCreate(savedInstanceState);
-	      setContentView(R.layout.main);
-	      btnplus = (Button)findViewById(R.id.plus);
-	      btnminus = (Button)findViewById(R.id.minus);
-	      tvnumber = (TextView)findViewById(R.id.number);
-	      btnplus.setOnClickListener(new OnClickListener() {
+    public void onCreate(Bundle savedInstanceState) { 			// I do not know what this does
+	      super.onCreate(savedInstanceState); 					// I do not know what this does
+	      setContentView(R.layout.main); 						// Connect this file to the interface xml file (in general)
+	      btnplus = (Button)findViewById(R.id.plus);			// Connect UI element in the interface file to a specific variable in this file
+	      btnminus = (Button)findViewById(R.id.minus);			// Connect UI element in the interface file to a specific variable in this file
+	      tvnumber = (TextView)findViewById(R.id.number);		// Connect UI element in the interface file to a specific variable in this file
+	      btnplus.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
 	    	  	public void onClick(View v) {
-	    		  Toast.makeText(HelloSolarSystemActivity.this, "plus button pressed", Toast.LENGTH_SHORT).show();
-	    		  tvnumber.setText("99");
+	    		  Toast.makeText(HelloSolarSystemActivity.this, "plus button pressed", Toast.LENGTH_SHORT).show(); // Show pop-up to verify it works
+	    		  tvnumber.setText("99");						// Update value in center of screen with high number 
+	    		  //TODO replace static text dynamic connection UI buttons
 	    	  }
 	      });
 	      
-	      btnminus.setOnClickListener(new OnClickListener() {
+	      btnminus.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
 	    	  	public void onClick(View v) {
-	    		  Toast.makeText(HelloSolarSystemActivity.this, "minus button pressed", Toast.LENGTH_SHORT).show();
-	    		  tvnumber.setText("00");
+	    		  Toast.makeText(HelloSolarSystemActivity.this, "minus button pressed", Toast.LENGTH_SHORT).show(); // Show pop-up to verify it works
+	    		  tvnumber.setText("00");						// Update value in center of screen with high number 
+	    		  //TODO replace static text dynamic connection UI buttons
 	    	  }
 	      });
-
-	
-	
 	}
-	  
 }
-	    /*      
+
+
+
+///////// 
+//Section goal - Previous exercises I'm keeping so I can lookup code solutions lateron
+/////////
+
+/*      
 	      //get the two controls we created earlier, also with the resource reference and the id
 	      final TextView tv_View = (TextView)findViewById(R.id.tv_View);
 	      final EditText et_Text = (EditText)findViewById(R.id.et_Text);
