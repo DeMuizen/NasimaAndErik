@@ -77,14 +77,11 @@ public class HelloSolarSystemActivity extends Activity {
 	              }
 	              return false;
 	          }
-
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				// TODO Auto-generated method stub	
 			}
 	      });
 			
-		
 		//super.onCreate(savedInstanceState);
         //setContentView(R.layout.main);
         myOption1 = (RadioButton)findViewById(R.id.option1);
@@ -94,36 +91,29 @@ public class HelloSolarSystemActivity extends Activity {
         myOption2.setOnClickListener(myOptionOnClickListener);
         myOption3.setOnClickListener(myOptionOnClickListener);
         myOption1.setChecked(true);
-
     }
 
  	RadioButton.OnClickListener myOptionOnClickListener =
-    		   new RadioButton.OnClickListener()
-    		  {
-
-    		  
+    	new RadioButton.OnClickListener()
+    	{
     		  public void onClick(View v) {
-    		   // TODO Auto-generated method stub
-    		   Toast.makeText(HelloSolarSystemActivity.this,
-    		     "Option 1 : " + myOption1.isChecked() + "\n" +
-    		     "Option 2 : " + myOption2.isChecked() + "\n" +
-    		     "Option 3 : " + myOption3.isChecked(),
-    		     Toast.LENGTH_LONG
-    		     ).show();
+    		   	// TODO Auto-generated method stub
+    		   	Toast.makeText(HelloSolarSystemActivity.this,
+    		     	"Option 1 : " + myOption1.isChecked() + "\n" +
+    		     	"Option 2 : " + myOption2.isChecked() + "\n" +
+    		     	"Option 3 : " + myOption3.isChecked(),
+    		     	Toast.LENGTH_LONG
+    		    ).show();
     		   
-    		   
-    		   Toast eriksToast = new Toast(HelloSolarSystemActivity.this);
-    		   eriksToast.setDuration(5000);
-    		   eriksToast.setText(
-    			"Option 1 : " + myOption1.isChecked() + "\n" +	
-    		    "Option 2 : " + myOption2.isChecked() + "\n" +
-    		    "Option 3 : " + myOption3.isChecked() 
-    		    );
-    		   eriksToast.show();
-    		  
+    		    Toast eriksToast = new Toast(HelloSolarSystemActivity.this);
+    		   		eriksToast.setDuration(5000);
+    		   		eriksToast.setText(
+    				"Option 1 : " + myOption1.isChecked() + "\n" +	
+    		    	"Option 2 : " + myOption2.isChecked() + "\n" +
+    		    	"Option 3 : " + myOption3.isChecked() 
+    		    	);
+    		    eriksToast.show();
     		  }
-
-    		  }; 		 
-
-      }
+    	}; 		 
+}
 */
