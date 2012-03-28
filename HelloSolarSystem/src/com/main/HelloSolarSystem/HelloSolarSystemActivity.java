@@ -43,7 +43,6 @@ public class HelloSolarSystemActivity extends Activity {
 	    	  }
 	      });
 	      
-	      
 	      btnminus.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
 	    	  	public void onClick(View v) {
 	    		  //Toast.makeText(HelloSolarSystemActivity.this, "minus button pressed", Toast.LENGTH_SHORT).show(); // Show pop-up to verify it works
