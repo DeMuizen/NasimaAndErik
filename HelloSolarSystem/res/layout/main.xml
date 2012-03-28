@@ -4,16 +4,14 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	xmlns:android="http://schemas.android.com/apk/res/android">
-<!--  <ImageButton -->
-<Button
+<ImageButton
 	android:id="@+id/plus"
 	android:layout_width="100dp"
 	android:layout_height="100dp"
 	android:layout_x="110dp"
 	android:layout_y="49dp" 
-	/>
-	<!--  android:src="@drawable/sign_plus"-->
-
+	android:src="@drawable/sign_plus"
+/>
 <TextView
 	android:id="@+id/number"
 	android:layout_width="100dp"
@@ -24,16 +22,14 @@
 	android:gravity="center"
 	android:layout_x="110dp"
 	android:layout_y="181dp" />
-<!--  <ImageButton -->
-<Button
+<ImageButton
 	android:id="@+id/minus"
 	android:layout_width="100dp"
 	android:layout_height="100dp"
 	android:layout_x="110dp"
 	android:layout_y="285dp" 
-	/>
-	<!-- android:src="@drawable/sign_minus" -->
-
+	android:src="@drawable/sign_minus"
+/>
 </AbsoluteLayout>
 
 
