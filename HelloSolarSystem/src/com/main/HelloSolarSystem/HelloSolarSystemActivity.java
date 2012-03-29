@@ -1,5 +1,5 @@
 package com.main.HelloSolarSystem; //File name and location within file structure
-
+//adding comments to see if they arrive on server
 import android.R.string;
 import android.app.Activity;
 import android.os.Bundle;
