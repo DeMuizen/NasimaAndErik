@@ -6,54 +6,54 @@
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <ImageButton
-    android:id="@+id/plusleft"
+    android:id="@+id/PlusLeft"
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:src="@drawable/sign_plus"
     android:layout_x="10dp"
     android:layout_y="49dp" />
 <ImageButton
-    android:id="@+id/plusright"
+    android:id="@+id/PlusRight"
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:src="@drawable/sign_plus"
     android:layout_x="210dp"
     android:layout_y="49dp" />
 <TextView
-    android:id="@+id/numberleft"
+    android:id="@+id/NumberLeft"
     android:layout_width="100dp"
     android:layout_height="70dp"
-    android:text="35"
+    android:text="10"
     android:gravity="center"
     android:textSize="50sp"
     android:textStyle="bold"
     android:layout_x="10dp"
     android:layout_y="181dp" />
 <TextView
-    android:id="@+id/numberright"
+    android:id="@+id/NumberRight"
     android:layout_width="100dp"
     android:layout_height="70dp"
-    android:text="35"
+    android:text="10"
     android:gravity="center"
     android:textSize="50sp"
     android:textStyle="bold"
     android:layout_x="210dp"
     android:layout_y="181dp" />
 <ImageButton
-    android:id="@+id/minusleft"
+    android:id="@+id/MinusLeft"
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:src="@drawable/sign_minus"
     android:layout_x="10dp"
     android:layout_y="285dp" />
 <ImageButton
-    android:id="@+id/minusright"
+    android:id="@+id/MinusRight"
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:src="@drawable/sign_minus"
     android:layout_x="210dp"
     android:layout_y="285dp" /><TextView
-    android:id="@+id/answer"
+    android:id="@+id/Answer"
     android:layout_width="300px"
     android:layout_height="wrap_content"
     android:layout_x="60dp"
@@ -64,12 +64,12 @@
     android:textStyle="bold" />
 
 <Spinner
-    android:id="@+id/spinner"
+    android:id="@+id/Spinner"
     android:layout_width="123dp"
     android:layout_height="wrap_content"
     android:layout_x="100dp"
     android:layout_y="196dp"
-    android:entries="@array/math_array" />
+    android:entries="@array/MathArray" />
 
 </AbsoluteLayout>
 

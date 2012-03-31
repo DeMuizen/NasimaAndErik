@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array
-        name="math_array">
+        name="MathArray">
         <item>multiply</item>
         <item>divide</item>
         <item>add</item>
