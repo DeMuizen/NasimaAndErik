@@ -1,58 +1,135 @@
+//TODO Create a personal toast. http://www.androidpeople.com/android-custom-toast-tutorial 
+
 package com.main.HelloSolarSystem; //File name and location within file structure
-//adding comments to see if they arrive on server
+
 import android.R.string;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.*;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 // import android.widget.RadioButton; //Only required if radio buttons are needed
 
 public class HelloSolarSystemActivity extends Activity {
-	  private ImageButton btnplus;
-	  private ImageButton btnminus;
-	  private TextView tvnumber;
-	  private int NumberOnScreen = 0;
-	 
-	  //RadioButton myOption1, myOption2, myOption3; //Only required if radio buttons are needed
-	
-///////// 
-//Section goal - Connect PLUS and MINUS buttons in UI so they control the number value in the center of the screen
-/////////
+	private ImageButton btnplusleft;
+	private ImageButton btnplusright;
+	private ImageButton btnminusleft;
+	private ImageButton btnminusright;
+	private TextView tvnumberleft;
+	private TextView tvnumberright;
+	private TextView tvanswer;
+	private int NumberOnScreenleft = 35;
+	private int NumberOnScreenright = 35;
+	public boolean FirstLoad = true;
+	private String SpinnerChoice = "x";
 	  
-	 //TODO Create a personal toast. http://www.androidpeople.com/android-custom-toast-tutorial 
+	//RadioButton myOption1, myOption2, myOption3; //Only required if radio buttons are needed
+		 	  
 	@Override
-    public void onCreate(Bundle savedInstanceState) { 			// I do not know what this does
-	      super.onCreate(savedInstanceState); 					// I do not know what this does
-	      setContentView(R.layout.main); 						// Connect this file to the interface xml file (in general)
-	      btnplus = (ImageButton)findViewById(R.id.plus);		// Connect UI element in the interface file to a specific variable in this file
-	      btnminus = (ImageButton)findViewById(R.id.minus);		// Connect UI element in the interface file to a specific variable in this file
-	      tvnumber = (TextView)findViewById(R.id.number);		// Connect UI element in the interface file to a specific variable in this file
-	      	      
-	      btnplus.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
+    public void onCreate(Bundle savedInstanceState) { 					// I do not know what this does
+	      super.onCreate(savedInstanceState); 							// I do not know what this does
+	      setContentView(R.layout.main); 								// Connect this file to the interface xml file (in general)
+	      btnplusleft = (ImageButton)findViewById(R.id.plusleft);		// Connect UI element in the interface file to a specific variable in this file
+	      btnplusright = (ImageButton)findViewById(R.id.plusright);		// Connect UI element in the interface file to a specific variable in this file
+	      btnminusleft = (ImageButton)findViewById(R.id.minusleft);		// Connect UI element in the interface file to a specific variable in this file
+	      btnminusright = (ImageButton)findViewById(R.id.minusright);	// Connect UI element in the interface file to a specific variable in this file
+	      tvnumberleft = (TextView)findViewById(R.id.numberleft);		// Connect UI element in the interface file to a specific variable in this file
+	      tvnumberright = (TextView)findViewById(R.id.numberright);		// Connect UI element in the interface file to a specific variable in this file
+	      tvanswer = (TextView)findViewById(R.id.answer);				// Connect UI element in the interface file to a specific variable in this file
+	      final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 	      
+	      //Spinner event handler
+		  spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+		      public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+		          //if(FirstLoad){
+		          //        FirstLoad = false;
+		          //        return;                         
+		          //}
+		          SpinnerChoice = spinner.getItemAtPosition(i).toString();                 
+		          UpdateAnswer();
+				  //if (SpinnerChoice.toString().equals("+") ) {
+				//	  Toast.makeText(HelloSolarSystemActivity.this, "String compare works", Toast.LENGTH_SHORT).show(); 
+				//	  UpdateAnswer();
+				//  }
+		      
+		      } // end of method
+		      public void onNothingSelected(AdapterView<?> adapterView) {
+		          return;
+		      } // end of method 
+		  }); //end of event handler
+	      		  
+	     btnplusleft.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
 	    	  public void onClick(View v) {
 	    		  //Toast.makeText(HelloSolarSystemActivity.this, "plus button pressed", Toast.LENGTH_SHORT).show(); // Show pop-up to verify it works
-	    		  String interum = tvnumber.getText().toString();
-	    		  NumberOnScreen = Integer.valueOf(interum) + 1;  
-	    		  tvnumber.setText(Integer.toString(NumberOnScreen));
-	    	  }
-	      });
+	    		  String interumleft = tvnumberleft.getText().toString();
+	    		  NumberOnScreenleft = Integer.valueOf(interumleft) + 1;  
+	    		  tvnumberleft.setText(Integer.toString(NumberOnScreenleft));
+	    		  UpdateAnswer();
+	    		  //tvanswer.setText(Integer.toString(NumberOnScreenright * NumberOnScreenleft));
+	    	  } // end of method
+	      }); //end of event handler
 	      
-	      btnminus.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
+	      btnminusleft.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
 	    	  	public void onClick(View v) {
 	    		  //Toast.makeText(HelloSolarSystemActivity.this, "minus button pressed", Toast.LENGTH_SHORT).show(); // Show pop-up to verify it works
-	    		  String interum = tvnumber.getText().toString();
-	    		  NumberOnScreen = Integer.valueOf(interum) - 1;  
-	    		  tvnumber.setText(Integer.toString(NumberOnScreen));
-	    	  }
-	      });
-	}
-}
+	    		  String interumleft = tvnumberleft.getText().toString();
+	    		  NumberOnScreenleft = Integer.valueOf(interumleft) - 1;  
+	    		  tvnumberleft.setText(Integer.toString(NumberOnScreenleft));
+	    		  UpdateAnswer();
+	    		  //tvanswer.setText(Integer.toString(NumberOnScreenright * NumberOnScreenleft));
+	    	  } // end of method
+	      }); //end of event handler
+	      
+	      btnplusright.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
+		      
+	    	  public void onClick(View v) {
+	    		  //Toast.makeText(HelloSolarSystemActivity.this, "plus button pressed", Toast.LENGTH_SHORT).show(); // Show pop-up to verify it works
+	    		  String interumright = tvnumberright.getText().toString();
+	    		  NumberOnScreenright = Integer.valueOf(interumright) + 1;  
+	    		  tvnumberright.setText(Integer.toString(NumberOnScreenright));
+	    		  UpdateAnswer();
+	    		  //tvanswer.setText(Integer.toString(NumberOnScreenright * NumberOnScreenleft));
+	    	  } // end of method
+	      }); //end of event handler
+	      
+	      btnminusright.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
+	    	  	public void onClick(View v) {
+	    		  //Toast.makeText(HelloSolarSystemActivity.this, "minus button pressed", Toast.LENGTH_SHORT).show(); // Show pop-up to verify it works
+	    		  String interumright = tvnumberright.getText().toString();
+	    		  NumberOnScreenright = Integer.valueOf(interumright) - 1;  
+	    		  tvnumberright.setText(Integer.toString(NumberOnScreenright));
+	    		  UpdateAnswer();
+	    		  //tvanswer.setText(Integer.toString(NumberOnScreenright * NumberOnScreenleft));
+	    	  } // end of method
+	      }); //end of event handler
+
+	} //end of OnCreate Bundle method      
+
+    public void UpdateAnswer(){
+		if (SpinnerChoice.toString().equals("add") ) { 
+		      tvanswer.setText(Integer.toString(NumberOnScreenright + NumberOnScreenleft));  
+	    } else if (SpinnerChoice.toString().equals("subtract") ) {
+			  tvanswer.setText(Integer.toString(NumberOnScreenright - NumberOnScreenleft));  
+		} else if (SpinnerChoice.toString().equals("multiply") ) {
+			  tvanswer.setText(Integer.toString(NumberOnScreenright * NumberOnScreenleft));
+	    } else if (SpinnerChoice.toString().equals("divide") ) {
+			  if ((NumberOnScreenright == 0) || (NumberOnScreenleft ==0)) {
+				  tvanswer.setText(Integer.toString(0));
+			  } else {
+				  tvanswer.setText(Integer.toString(NumberOnScreenright / NumberOnScreenleft));
+			  }
+		 }	
+	} //end of method
+
+} //end of Hello SolarSystem class/file
+
+
 
 
 
