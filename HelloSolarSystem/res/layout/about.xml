@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:padding="10dip">
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1"
+        >
+<TextView
+android:id="@+id/about_content1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:paddingBottom="20dip"
+android:textSize="19sp" android:textColor="#ffffff"
+android:text="Version 1.0" />
+
+<TextView
+android:id="@+id/about_content2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:paddingBottom="20dip"
+android:textSize="19sp" android:textColor="#ffffff"
+android:text="Compiled on Eclipse 3.7.2" />
+
+<TextView
+android:id="@+id/about_content3"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:paddingBottom="20dip"
+android:textSize="19sp" android:textColor="#ffffff"
+android:text="API level 7 and above" />
+
+<TextView
+android:id="@+id/about_content4"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:paddingBottom="20dip"
+android:textSize="19sp" android:textColor="#ffffff"
+android:text="Android OS 2.3.3 and above" />
+
+<TextView
+android:id="@+id/about_content5"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textSize="19sp" android:textColor="#ffffff"
+android:text="Two campers are hiking in the woods when one is bitten on the rear end by a rattlesnake. “I’ll go into town for a doctor,” the other says. He runs ten miles to a small town and finds the town’s only doctor, who is delivering a baby. “I can’t leave,” the doctor says. ‘But here’s what to do. Take a knife, cut a little X where the bite is, suck out the poison and spit it on the ground.” The guy ruins back to his friend, who is in agony. ‘What did the doctor say?” the victim asks. “He says you’re gonna die.”" />
+
+</TableLayout>
+
+</ScrollView>

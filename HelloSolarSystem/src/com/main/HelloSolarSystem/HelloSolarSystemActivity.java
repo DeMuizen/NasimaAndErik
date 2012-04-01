@@ -46,6 +46,9 @@ public class HelloSolarSystemActivity extends Activity {
 	        case R.id.about_menuitem: 
 	        startActivity(new Intent(this, About.class));
 	        break;
+	        case R.id.settings_menuitem:
+	            startActivity(new Intent(this, Preferences.class));
+	        break;
 	        }
 	    return true;
 	}

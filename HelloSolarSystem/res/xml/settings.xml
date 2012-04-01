@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <CheckBoxPreference
+    android:key="setting1"
+    android:title="Allow x-ray vision"
+    android:summary="Camera takes one normal photo and one additional photo using x-ray spectrum"
+    android:defaultValue="true" />
+    
+    <CheckBoxPreference
+    android:key="setting2"
+    android:defaultValue="true" 
+    android:title="Waterproof phone" 
+    android:summary="Closes off all external ports to stop water reaching critical components"/>
+    
+    <CheckBoxPreference
+    android:key="setting3"
+    android:title="Avoid the misses"
+    android:summary="Automatically adds white noise to phone call when within 100m of pub or cafe"
+    android:defaultValue="false" />
+    
+</PreferenceScreen>

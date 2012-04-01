@@ -22,5 +22,8 @@
             android:label="About"
             android:theme="@android:style/Theme.Dialog">
         </activity>
+        <activity android:name=".Preferences"
+            android:label="Settings ">
+        </activity>
      </application>
 </manifest>
