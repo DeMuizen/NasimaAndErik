@@ -1,7 +1,11 @@
 package com.main.HelloSolarSystem; //File name and location within file structure
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.*;
 import android.widget.AdapterView;
@@ -21,7 +25,35 @@ public class HelloSolarSystemActivity extends Activity {
 	private int NumberOnScreenRight = 10;
 	public boolean FirstLoad = true;
 	private String SpinnerChoice = "x";
-	  		 	  
+	
+	/////////////
+	//MENU
+	/////////////
+	
+	//Define menu layout
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    
+	    MenuInflater inflater = getMenuInflater();
+	    inflater.inflate(R.menu.menu, menu);
+	    return true;
+	}
+	
+	//Define menu behavior when option is clicked
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	        case R.id.about_menuitem: 
+	        startActivity(new Intent(this, About.class));
+	        break;
+	        }
+	    return true;
+	}
+	
+	/////////////
+	//MAIN CODE BODY
+	/////////////
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) { 					// I do not know what this does
 	      super.onCreate(savedInstanceState); 							// I do not know what this does
@@ -65,7 +97,6 @@ public class HelloSolarSystemActivity extends Activity {
 	      }); //end of event handler
 	      
 	      btnPlusRight.setOnClickListener(new OnClickListener() {	// Add event handler to buttons in UI
-		      
 	    	  public void onClick(View v) {
 	    		  String InterumRight = tvNumberRight.getText().toString();
 	    		  NumberOnScreenRight = Integer.valueOf(InterumRight) + 1;  

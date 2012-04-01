@@ -62,7 +62,7 @@
     android:text="XXXX"
     android:textSize="54sp"
     android:textStyle="bold" />
-
+
 <Spinner
     android:id="@+id/Spinner"
     android:layout_width="123dp"
@@ -72,77 +72,3 @@
     android:entries="@array/MathArray" />
 
 </AbsoluteLayout>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <?xml version="1.0" encoding="utf-8"?> -->
-<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
-<!--     android:id="@+id/LinearLayout1" -->
-<!--     android:layout_width="fill_parent" -->
-<!--     android:layout_height="fill_parent" -->
-<!--     android:orientation="vertical" > -->
-
-<!--     <CheckBox -->
-<!--         android:id="@+id/checkBox1" -->
-<!--         android:layout_width="wrap_content" -->
-<!--         android:layout_height="wrap_content" -->
-<!--         android:checked="true" android:text="@string/checkbox_allow_background_switch"/> -->
-
-<!-- <RadioGroup -->
-<!--     android:id="@+id/Colour_selector" -->
-<!--     android:layout_width="fill_parent" -->
-<!--     android:layout_height="wrap_content" -->
-<!--     android:orientation="vertical" > -->
-
-<!--     <RadioButton -->
-<!--         android:id="@+id/option1" -->
-<!--         android:layout_width="wrap_content" -->
-<!--         android:layout_height="wrap_content" -->
-<!--         android:text="@string/radio_blue" android:checked="false"/> -->
-
-<!--     <RadioButton -->
-<!--         android:id="@+id/option2" -->
-<!--         android:layout_width="wrap_content" -->
-<!--         android:layout_height="wrap_content" -->
-<!--         android:text="@string/radio_green" android:checked="false"/>  -->
-
-<!--         <RadioButton -->
-<!--         android:id="@+id/option3" -->
-<!--         android:layout_width="wrap_content" -->
-<!--         android:layout_height="wrap_content" -->
-<!--         android:text="@string/radio_green" android:checked="false"/>  -->
-    
-<!-- </RadioGroup> -->
-
-<!-- 	<EditText  -->
-<!-- 	    android:layout_height="wrap_content"  -->
-<!--         android:layout_width="fill_parent" android:textColor="#FF0000FF" -->
-<!--         android:id="@+id/et_Text" /> -->
- 
-<!-- 	<TextView -->
-<!--         android:id="@+id/tv_View" -->
-<!--         android:layout_width="fill_parent" -->
-<!--         android:layout_height="wrap_content" -->
-<!--         android:text="@string/hello" -->
-<!--         android:textColor="#FF00FF00" /> -->
-
-<!--     <AnalogClock -->
-<!--         android:id="@+id/analogClock1" -->
-<!--         android:layout_width="wrap_content" -->
-<!--         android:layout_height="wrap_content" /> -->
-
-<!--     <Chronometer android:text="Chronometer" -->
-<!--         android:id="@+id/Chronometer1" -->
-<!--         android:layout_width="wrap_content" -->
-<!--         android:layout_height="wrap_content" /> -->
-
-<!-- </LinearLayout> -->
-
