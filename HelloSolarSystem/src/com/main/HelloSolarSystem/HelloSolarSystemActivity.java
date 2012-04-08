@@ -2,9 +2,7 @@ package com.main.HelloSolarSystem; //File name and location within file structur
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,10 +10,8 @@ import android.view.View;
 import android.view.View.*;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class HelloSolarSystemActivity extends Activity {
 	private ImageButton btnPlusLeft;
@@ -29,8 +25,6 @@ public class HelloSolarSystemActivity extends Activity {
 	private int NumberOnScreenRight = 10;
 	public boolean FirstLoad = true;
 	private String SpinnerChoice = "x";
-	private int intValue;
-	private String Value;
 	
 	/////////////
 	//MENU
@@ -45,12 +39,12 @@ public class HelloSolarSystemActivity extends Activity {
 	    return true;
 	}
 	
-	//Define menu behavior when option is clicked
+	//Define menu behaviour when option is clicked
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	        case R.id.about_menuitem: 
-	        startActivity(new Intent(this, About.class));
+	        	startActivity(new Intent(this, About.class));
 	        break;
 	        case R.id.settings_menuitem:
 	            startActivity(new Intent(this, Preferences.class));
@@ -67,13 +61,13 @@ public class HelloSolarSystemActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) { 					// I do not know what this does
 	      super.onCreate(savedInstanceState); 							// I do not know what this does
 	      setContentView(R.layout.main); 								// Connect this file to the interface xml file (in general)
-	      btnPlusLeft = (ImageButton)findViewById(R.id.PlusLeft);		
-	      btnPlusRight = (ImageButton)findViewById(R.id.PlusRight);		
-	      btnMinusLeft = (ImageButton)findViewById(R.id.MinusLeft);		
-	      btnMinusRight = (ImageButton)findViewById(R.id.MinusRight);	
-	      tvNumberLeft = (TextView)findViewById(R.id.NumberLeft);		
-	      tvNumberRight = (TextView)findViewById(R.id.NumberRight);		
-	      tvAnswer = (TextView)findViewById(R.id.Answer);				
+	      btnPlusLeft = (ImageButton)findViewById(R.id.PlusLeft);		// Connect UI element in the interface file to a specific variable in this file
+	      btnPlusRight = (ImageButton)findViewById(R.id.PlusRight);		// Connect UI element in the interface file to a specific variable in this file
+	      btnMinusLeft = (ImageButton)findViewById(R.id.MinusLeft);		// Connect UI element in the interface file to a specific variable in this file
+	      btnMinusRight = (ImageButton)findViewById(R.id.MinusRight);	// Connect UI element in the interface file to a specific variable in this file
+	      tvNumberLeft = (TextView)findViewById(R.id.NumberLeft);		// Connect UI element in the interface file to a specific variable in this file
+	      tvNumberRight = (TextView)findViewById(R.id.NumberRight);		// Connect UI element in the interface file to a specific variable in this file
+	      tvAnswer = (TextView)findViewById(R.id.Answer);				// Connect UI element in the interface file to a specific variable in this file
 	      final Spinner Spinner = (Spinner) findViewById(R.id.Spinner);
 	      
 	      //Spinner event handler
@@ -93,11 +87,6 @@ public class HelloSolarSystemActivity extends Activity {
 	    		  NumberOnScreenLeft = Integer.valueOf(InterumLeft) + 1;  
 	    		  tvNumberLeft.setText(Integer.toString(NumberOnScreenLeft));
 	    		  UpdateAnswer();
-	    		  MyApp.setState(1);
-	    		  intValue= MyApp.getState();
-	    		  Value = String.valueOf(intValue);
-	    		  Toast.makeText(HelloSolarSystemActivity.this, Value, Toast.LENGTH_SHORT).show(); 
-	    		 // ivAboutImage.setVisibility(ImageView.INVISIBLE);
 	    	  } // end of method
 	      }); //end of event handler
 	      
@@ -107,11 +96,6 @@ public class HelloSolarSystemActivity extends Activity {
 	    		  NumberOnScreenLeft = Integer.valueOf(InterumLeft) - 1;  
 	    		  tvNumberLeft.setText(Integer.toString(NumberOnScreenLeft));
 	    		  UpdateAnswer();
-	    		  MyApp.setState(0);
-	    		  intValue= MyApp.getState();
-	    		  Value = String.valueOf(intValue);
-	    		  Toast.makeText(HelloSolarSystemActivity.this, Value, Toast.LENGTH_SHORT).show(); 
-	    		
 	    	  } // end of method
 	      }); //end of event handler
 	      

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget65"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1" >
+
+
+    <TableRow
+        android:id="@+id/tablePlusSigns"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false" >
+        
+        <ImageButton
+            android:id="@+id/PlusRight"
+            android:src="@drawable/sign_plus"
+            android:layout_width="100dp"
+    		android:layout_height="100dp">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/PlusLeft"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sign_plus" />
+
+<TextView></TextView>
+
+    </TableRow>
+    
+
+	<TableRow
+	    android:id="@+id/tableNumbers"
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:stretchColumns="2" >
+        
+		<TextView
+		    android:id="@+id/NumberLeft"
+		    android:layout_width="100dp"
+		    android:layout_height="70dp"
+		    android:text="10"
+		    android:gravity="center"
+		    android:textSize="50sp"
+		    android:textStyle="bold"
+		    android:layout_x="10dp"
+		    android:layout_y="181dp" />
+		
+		
+		<Spinner
+		    android:id="@+id/Spinner"
+		    android:layout_width="100dp"
+		    android:layout_height="wrap_content"
+		    android:entries="@array/MathArray" />
+		
+		<TextView
+		    android:id="@+id/NumberRight"
+		    android:layout_width="100dp"
+		    android:layout_height="70dp"
+		    android:text="10"
+		    android:gravity="center"
+		    android:textSize="50sp"
+		    android:textStyle="bold"
+		    android:layout_x="210dp"
+		    android:layout_y="181dp" />
+        
+</TableRow>
+
+	<TableRow
+        android:id="@+id/tableNumbers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    >
+<ImageButton
+    android:id="@+id/MinusLeft"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/sign_minus"
+    android:layout_x="10dp"
+    android:layout_y="285dp" />
+
+<ImageButton
+    android:id="@+id/MinusRight"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/sign_minus" />
+
+<TextView></TextView>
+
+</TableRow>
+
+<TextView
+    android:id="@+id/Answer"
+    android:layout_width="300px"
+    android:layout_height="wrap_content"
+    android:layout_x="60dp"
+    android:layout_y="400dp"
+    android:gravity="center"
+    android:text="XXXX"
+    android:textSize="54sp"
+    android:textStyle="bold" />
+
+</TableLayout>

@@ -2,27 +2,21 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     
     <CheckBoxPreference
-    android:key="preference1"
+    android:key="setting1"
     android:title="Allow x-ray vision"
     android:summary="Camera takes one normal photo and one additional photo using x-ray spectrum"
     android:defaultValue="true" />
     
     <CheckBoxPreference
-    android:key="preference2"
+    android:key="setting2"
     android:defaultValue="true" 
     android:title="Waterproof phone" 
     android:summary="Closes off all external ports to stop water reaching critical components"/>
     
     <CheckBoxPreference
-    android:key="preference3"
+    android:key="setting3"
     android:title="Avoid the misses"
     android:summary="Automatically adds white noise to phone call when within 100m of pub or cafe"
-    android:defaultValue="false" />
-    
-    <CheckBoxPreference
-    android:key="preference4"
-    android:title="Hide image"
-    android:summary="Do not display image in About screen"
     android:defaultValue="false" />
     
 </PreferenceScreen>
